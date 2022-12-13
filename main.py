@@ -8,12 +8,13 @@ from io import BytesIO
 
 
 st.title('X-Ray Diagnosis Tuberculosis')
-
+st.text('Final Project by Medical Data Sciences (MDS) - Group 10')
 
 def main():
     IMM_SIZE = 224
-    lab = {'Tuberculosis': 0, 'Normal': 1}
+    lab = {'Covid': 0, 'Viral Pneumonia': 1, 'Normal': 2}
     uploaded_file = st.file_uploader("Choose a file")
+    st.info("Please upload a file in JPEG/JPG/PNG format")
 
     def diagnosis(file):
         # Download image
