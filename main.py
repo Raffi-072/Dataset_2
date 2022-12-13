@@ -12,7 +12,7 @@ st.text('Final Project by Medical Data Sciences (MDS) - Group 10')
 
 def main():
     IMM_SIZE = 224
-    lab = {'Covid': 0, 'Viral Pneumonia': 1, 'Normal': 2}
+    lab = {'tuberculosis': 0, 'Normal': 1)
     uploaded_file = st.file_uploader("Choose a file")
     st.info("Please upload a file in JPEG/JPG/PNG format")
 
