@@ -6,9 +6,13 @@ import matplotlib.pyplot as plt
 import pickle
 from io import BytesIO
 
-
-st.title('X-Ray Diagnosis Tuberculosis')
+html_temp = """
+<div style="background-color:tomato;padding:1.5px">
+<h1 style="color:white;text-align:center;">X-Ray Diagnosis Tuberculosis </h1>
+</div><br>"""
+st.markdown(html_temp,unsafe_allow_html=True)
 st.text('Final Project by Medical Data Sciences (MDS) - Group 10')
+
 
 def main():
     IMM_SIZE = 224
@@ -73,6 +77,7 @@ def main():
         # Find the name of the diagnosis
         ## YOUR CODE GOES HERE##
 
+        st.text('Your diagnosis is:') 
         diag = {i for i in lab if lab[i] == predictions}
 
         return diag
