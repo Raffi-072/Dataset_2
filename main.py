@@ -6,6 +6,17 @@ import matplotlib.pyplot as plt
 import pickle
 from io import BytesIO
 
+page_bg_img = '''
+<style>
+body {
+background-image: url("https://images.unsplash.com/photo-1542281286-9e0a16bb7366");
+background-size: cover;
+}
+</style>
+'''
+
+st.markdown(page_bg_img, unsafe_allow_html=True)
+
 html_temp = """
 <div style="background-color:tomato;padding:1.5px">
 <h1 style="color:white;text-align:center;">X-Ray Diagnosis Tuberculosis </h1>
